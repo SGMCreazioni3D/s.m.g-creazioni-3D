@@ -74,14 +74,14 @@ nav ul li a {
     transition: all 0.3s ease; /* Effetto di transizione */
 }
 #gallery h2:hover {
-    transform: scale(1.05); /* Effetto di ingrandimento al passaggio del mouse */
+    transform: scale(1.); /* Effetto di ingrandimento al passaggio del mouse */
 }
 section h2 {
     text-align: center;
 }
 .gallery-immages {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Mostra gli oggetti in due colonne */
+    grid-template-columns: repeat(2, 1fr); /* Mostra gli oggetti in due colonne */
     gap: 20px;
     margin-top: 20px;
 }
