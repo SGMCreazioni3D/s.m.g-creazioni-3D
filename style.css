@@ -151,3 +151,13 @@ footer {
     text-align: center;
     margin-bottom: 50px;
 }
+.mail{
+    color: #fff;
+    text-decoration: none;
+    cursor: default;
+}
+.mail a{
+    text-decoration: none;
+    cursor: default;
+    color: #fff;
+}
