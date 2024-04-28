@@ -1,132 +1,120 @@
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Stile generale del body */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
-/* Modifica per dispositivi mobili */
-@media screen and (max-width: 768px) {
-    header {
-        height: auto; /* Altezza automatica per adattarsi al contenuto */
-    }
-    
-    #logo {
-        float: none; /* Rimuovi il float per adattarsi ai dispositivi mobili */
-        margin: 10px auto; /* Centra il logo */
-    }
-    
-    nav ul li {
-        display: block; /* Mostra gli elementi della navigazione uno sotto l'altro */
-        margin: 10px 0; /* Aggiungi spazio tra gli elementi della navigazione */
-    }
-    
-    #about, #gallery {
-        padding: 30px 10px; /* Riduci il padding per adattarsi ai dispositivi mobili */
-    }
-    
-    .gallery-images {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Modifica la griglia per adattarsi ai dispositivi mobili */
-        gap: 10px; /* Riduci lo spazio tra le immagini */
-    }
-    
-    .item img {
-        width: 100%; /* Rendi le immagini della galleria di larghezza completa */
-        height: auto; /* Altezza automatica per mantenere l'aspetto proporzionato */
-    }
+
+/* Stile dell'header */
+header {
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+    background-color: #00B2FF;
 }
-/* Modifica per PC */
-@media screen and (min-width: 768px) {
-    header {
-        height: 95px; /* Ripristina l'altezza originale per PC */
-    }
-    
-    #logo {
-        float: left; /* Ripristina il float per PC */
-        margin: 20px 20px 20px 0; /* Ripristina il margine per PC */
-    }
-    
-    nav ul li {
-        display: inline; /* Ripristina il display inline per PC */
-        margin: 0 20px; /* Ripristina il margine per PC */
-    }
+
+/* Stile del logo */
+#logo {
+    width: 60px;
+    height: 60px;
+    vertical-align: middle;
+    margin-right: 10px;
 }
+
+/* Stile dell'h1 nell'header */
+header h1 {
+    display: inline-block;
+    vertical-align: middle;
+    color: #000; /* Cambia il colore del testo dell'intestazione */
+}
+
+/* Stile della navigazione */
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Stile dei link nella navigazione */
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
 nav ul li a {
     color: #fff;
     text-decoration: none;
-}
-#about {
-    background-color: #fff !important; /* Colore di sfondo personalizzato */
-    padding: 50px 20px;
-}
-#about h2 {
-    text-align: center;
-    margin-bottom: 20px; /* Riduciamo il margine inferiore */
-    font-family: 'Montserrat', sans-serif; /* Font più stiloso */
-    font-size: 2.5em; /* Dimensione del testo leggermente più piccola */
-    color: #333; /* Colore del testo */
-    text-transform: uppercase; /* Trasformiamo il testo in maiuscolo */
-    letter-spacing: 2px; /* Spaziatura tra le lettere */
-    transition: all 0.3s ease; /* Effetto di transizione */
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #000;
 }
 
-#about h2:hover {
-    transform: scale(1.05); /* Effetto di ingrandimento al passaggio del mouse */
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.5);
 }
-#about p {
-    text-align: justify;
-    font-family: 'Arial', sans-serif; /* Font più leggibile */
-    font-size: 1.2em; /* Dimensione del testo */
-    color: #666; /* Colore del testo più scuro */
-    line-height: 1.6; /* Altezza della riga per una migliore leggibilità */
-}
-#about p strong {
-    font-weight: bold;
-    color: #000;
-    display: block;
-    margin-top: 15px;
-    text-align: center;
-    font-style: italic; 
-    font-family: 'Arial', sans-serif;
-    font-size: 36px;
-}
-#gallery h2 {
-    text-align: center;
-    margin-bottom: 20px; /* Riduciamo il margine inferiore */
-    font-family: 'Montserrat', sans-serif; /* Font più stiloso */
-    font-size: 2.5em; /* Dimensione del testo leggermente più piccola */
-    color: #333; /* Colore del testo */
-    text-transform: uppercase; /* Trasformiamo il testo in maiuscolo */
-    letter-spacing: 2px; /* Spaziatura tra le lettere */
-    transition: all 0.3s ease; /* Effetto di transizione */
-}
-#gallery h2:hover {
-    transform: scale(1); /* Effetto di ingrandimento al passaggio del mouse */
-}
-section h2 {
-    text-align: center;
-}
-.gallery-immages {
+.gallery-images {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Mostra gli oggetti in due colonne */
+    grid-template-columns: repeat(3, 1fr); /* Tre colonne con larghezza uguale */
     gap: 20px;
     margin-top: 20px;
 }
 .item {
     text-align: center;
     margin-bottom: 50px;
-    transition: opacity 0.3 ease;
+    transition: opacity 0.3s ease;
 }
-.item:hover {
-    opacity: 0.8; /* Riduci leggermente l'opacità al passaggio del mouse */
-    transform: scale(1.5);
-}
+
 .item img {
-    width: 200px; /* larghezza predefinita */
-    height: auto; /* altezza automatica per mantenere l'aspetto proporzionato */
+    width: 100%; /* Larghezza del 100% per adattarsi al contenitore */
+    height: auto; /* Altezza automatica per mantenere l'aspetto proporzionato */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
+/* Stile delle sezioni */
+section {
+    background: #fff;
+    padding: 50px;
+    text-align: center;
+    margin-top: 20px; /* Aggiungi spazio tra le sezioni */
+    border-radius: 10px; /* Rendi i bordi delle sezioni arrotondati */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Aggiungi una leggera ombra */
+}
+
+/* Stile degli h2 nelle sezioni */
+section h2 {
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+
+section h2:hover {
+    transform: scale(1.05);
+}
+
+/* Stile dei paragrafi nelle sezioni */
+section p {
+    text-align: justify;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2em;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Stile dei footer */
 footer {
     background-color: #333;
     padding: 20px 0;
@@ -134,55 +122,105 @@ footer {
     color: #fff;
 }
 
+/* Stile del container nel footer */
 .container {
     max-width: 1200px;
     margin: 0 auto;
 }
 
+/* Stile delle informazioni di contatto */
 .contacts {
     text-align: center;
+    margin-bottom: 20px;
 }
 
+/* Stile degli h3 nelle informazioni di contatto */
 .contacts h3 {
     font-size: 1.5em;
     color: #fff;
+    margin-bottom: 10px;
 }
 
+/* Stile delle ul nelle informazioni di contatto */
 .contacts ul {
     list-style-type: none;
     padding: 0;
 }
 
+/* Stile delle li nelle informazioni di contatto */
 .contacts ul li {
     margin-bottom: 10px;
 }
 
+/* Stile delle icone nelle informazioni di contatto */
 .contacts ul li i {
     margin-right: 10px;
     color: #007bff;
 }
-.contacts ul li.insta p,
-.contacts ul li.insta a {
-    display: inline-block;
+
+/* Stile del testo nell'informazione di contatto Instagram */
+.contacts ul li.insta p {
+    display: inline;
     margin: 0;
 }
 
+/* Stile del link Instagram nelle informazioni di contatto */
 .contacts ul li.insta a {
     color: #fff;
     text-decoration: none;
     margin-left: 5px;
 }
+
+/* Stile del testo nel footer */
+footer p {
+    font-size: 0.9em;
+}
+
+    .gallery-images {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+}
 .item {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.item:hover {
+    transform: scale(1.05);
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.item h3, .item p {
     text-align: center;
-    margin-bottom: 50px;
+    margin: 10px;
 }
-.mail{
-    color: #fff;
-    text-decoration: none;
-    cursor: default;
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
 }
-.mail a{
+
+.contacts ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.contacts li {
+    margin-bottom: 10px;
+}
+
+.contacts a {
+    color: white;
     text-decoration: none;
-    cursor: default;
-    color: #fff;
 }
