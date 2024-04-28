@@ -1,4 +1,3 @@
-
 /* Reset CSS */
 * {
     margin: 0;
@@ -15,10 +14,9 @@ body {
 
 /* Stile dell'header */
 header {
-    background: #fff;
+    background: #00B2FF;
     padding: 20px;
     text-align: center;
-    background-color: #00B2FF;
 }
 
 /* Stile del logo */
@@ -33,7 +31,7 @@ header {
 header h1 {
     display: inline-block;
     vertical-align: middle;
-    color: #000; /* Cambia il colore del testo dell'intestazione */
+    color: #000;
 }
 
 /* Stile della navigazione */
@@ -54,26 +52,28 @@ nav ul li a {
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 5px;
-    color: #000;
 }
 
 nav ul li a:hover {
     background-color: rgba(255, 255, 255, 0.5);
 }
+
+/* Stile della galleria di immagini */
 .gallery-images {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Tre colonne con larghezza uguale */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Utilizza colonne flessibili */
     gap: 20px;
     margin-top: 20px;
 }
+
 .item {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     transition: opacity 0.3s ease;
 }
 
 .item img {
-    width: 100%; /* Larghezza del 100% per adattarsi al contenitore */
+    max-width: 100%; /* Massima larghezza del 100% per adattarsi al contenitore */
     height: auto; /* Altezza automatica per mantenere l'aspetto proporzionato */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -114,7 +114,7 @@ section p {
     line-height: 1.6;
 }
 
-/* Stile dei footer */
+/* Stile del footer */
 footer {
     background-color: #333;
     padding: 20px 0;
@@ -176,51 +176,25 @@ footer p {
     font-size: 0.9em;
 }
 
+/* Media query per desktop con larghezza minore o uguale a 1024px */
+@media only screen and (min-width: 769px) {
     .gallery-images {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-}
-.item {
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
+        grid-template-columns: repeat(3, 1fr); /* Tre colonne con larghezza uguale */
+        gap: 20px; /* Aggiungi spazio tra le immagini */
+    }
 
-.item:hover {
-    transform: scale(1.05);
-}
-
+    .item {
+        margin-bottom: 30px; /* Aumenta lo spazio tra le immagini */
+    }
+    /* Stile delle immagini nella galleria */
 .item img {
-    width: 100%;
-    height: auto;
-    display: block;
+    max-width: 100%; /* Massima larghezza del 100% per adattarsi al contenitore */
+    height: auto; /* Altezza automatica per mantenere l'aspetto proporzionato */
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    max-width: 200px; /* Riduci la larghezza massima delle immagini su desktop */
 }
 
-.item h3, .item p {
-    text-align: center;
-    margin: 10px;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-}
-
-.contacts ul {
-    padding: 0;
-    list-style-type: none;
-}
-
-.contacts li {
-    margin-bottom: 10px;
-}
-
-.contacts a {
-    color: white;
-    text-decoration: none;
 }
